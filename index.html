@@ -46,13 +46,13 @@
             <div class="search-bar col-md-6 mx-auto">
                 <h1 class="text-center">Lyrics Search</h1>
                 <div class="search-box my-5">
-                    <input type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button class="btn btn-success search-btn">Search</button>
+                    <input id="search-data" type="text" class="form-control" placeholder="Enter your artist song name">
+                    <button id="search-btn" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
             <!-- === Simple results === -->
             <div class="d-flex justify-content-center">
-                <div class="">
+                <div class="song-result" id="results">
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
@@ -61,9 +61,9 @@
                 </div>
             </div>
             <!-- Single Lyrics -->
-            <div class="single-lyrics text-center">
-                <button class="btn go-back">&lsaquo;</button>
-                <h2 class="text-success mb-4">Pentatonix - Na Na Na</h2>
+            <div class="single-lyrics text-center" >
+                <button id="lyrics" class="btn go-back">&lsaquo;</button>
+                <h2 id="" class="text-success mb-4">Pentatonix - Na Na Na</h2>
                 <pre class="lyric text-white">
     Wont go whistling like the wind blows,
     Looking out my window,
@@ -221,6 +221,7 @@
 
     <!-- Custom Script Here -->
 
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ body{
     background-color: #13141b;
     color: #ffffff;
     background-image: url(images/bg-image.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
     background-position: top;
 }

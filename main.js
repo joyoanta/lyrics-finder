@@ -18,6 +18,8 @@ form.addEventListener('submit', function(e) {
 
 })
 
+// Api integration 
+
 async function searchSongs(term) {
    const res = await fetch(`https://api.lyrics.ovh/suggest/${term}&limit=10`);
     const data = await res.json();
@@ -27,7 +29,7 @@ async function searchSongs(term) {
     console.log(data)
  }
 
-
+// Songs name Display 
 
 function showData(data){
 
@@ -40,16 +42,49 @@ function showData(data){
          <button class="btn btn-success" data-artist= "${song.artist.name}" data-songtitle = "${song.title}">Get Lyrics</button>
       </li>
       `;
+    
    });
-   
+
+
+                                                       // Standard Output
+
    result.innerHTML = `
    <ul class="songs">
       ${output}
    </ul>
    `;
-   
+
+                                              // Fancy outlook design 
+
+// let output2 = '';
+// data.data.forEach(song=>{
+
+//    output2 +=   `
+//                <div class="single-result row align-items-center my-3 p-3 re" id="result">
+//                  <div class="col-md-9">
+//                      <h3 class="lyrics-name"> ${song.title}</h3>
+//                      <p class="author lead">Album by <span> ${song.artist.name}</span></p>
+//                  </div>
+//                  <div class="col-md-3 text-md-right text-center">
+//                      <button class="btn btn-success" data-artist= "${song.artist.name}" data-songtitle = "${song.title}">Get Lyrics</button>
+//                  </div>
+//              </div>
+//             `
+
+// })
+
+                                                         // output for fancy 
+
+//    result.innerHTML = `
+//    <div>
+//    ${output2}
+//    </div
+//    `;
+
+
 }
 
+// Lyris Display 
 
 async function getLyrics(songTitle, artist){
 
@@ -75,17 +110,3 @@ result.addEventListener ("click", function(e){
       getLyrics(songTitle, artist);
    }
 })
-
-
-
-
-   // function searchSongs (term){
-
-   //    fetch (`https://api.lyrics.ovh/suggest/${term}`)
-   //    .then (res => res.json())
-   //    .then (data => console.log(data));
-   
-   //    showData (data); 
-
-    
-   

@@ -56,9 +56,9 @@ async function getLyrics(songTitle, artist){
    const res = await fetch(`https://api.lyrics.ovh/v1/${artist}/${songTitle}`);
    const data = await res.json();
 
-  const lyrics = data.lyrics.replace(/(\r\n|\r |\n)/g,"<br>");
+  const lyrics = data.lyrics;
   result.innerHTML = `<h2> ${songTitle}- ${artist} </h2>
-  <span> ${lyrics} </span>`
+  <span> <pre> ${lyrics} </pre> </span>`
 }
 
 // Lyrics Button 

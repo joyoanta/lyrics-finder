@@ -39,18 +39,24 @@ body{
     border-radius: 15px;
 }
 
-
 ul.songs {
     list-style-type: none;
     padding: 0;
   }
   
-  ul.songs li {
+ul.songs li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
   }
+
+pre{
+
+    color: white;
+}
+
+
 
 
 

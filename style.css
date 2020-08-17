@@ -39,7 +39,18 @@ body{
     border-radius: 15px;
 }
 
-.single-lyrics, .search-result, .song-result{
-    display: none;
-}
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+
 
